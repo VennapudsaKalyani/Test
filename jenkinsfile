@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  environment {
+    APP = "cgy"
+    AAPP = "mlp"
+  }
+  stages {
+    stage("simple"){
+      steps {
+        echo 'printing environment variables ${env.APP}'
+        echo "hello please ${env.AAPP}"
+      }
+    }
+  }
+}
